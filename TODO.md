@@ -1,0 +1,15 @@
+- [ ] **Add option to Editor for the title, type and categories make a dropdown or whatever** (Type / Title done)
+- [ ] **Finish Account Settings Modal, refactor the V1 made**
+- [ ] **Create a view page**
+- [ ] **In view page create a button that permit to copy Markdown/HTML** (See HTML5)
+- [ ] **In view page create a button that permit to modify the content**
+- [ ] **In view page create a button that permit to delete the content** (Add modal)
+- [ ] **Using slateJS for the wisywyg** (https://docs.slatejs.org)
+- [x] Show categories under content card
+- [x] Filter with categories (Animation is a +)
+- [x] Show all content in Home page
+- [ ] Add an URL option for maybe admin space of blog/website (need to test the best way to do it)
+- [x] Add a TODO list inside the application (Use JSON and not SQLITE for the data)
+- [ ] Add black & white theme
+- [ ] Change todo by a calendar + add a notification system
+- [ ] Add I18n to permit multiple langage :)
