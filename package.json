@@ -44,7 +44,7 @@
     "react-scripts": "3.4.0",
     "react-transition-group": "^4.3.0",
     "showdown": "^1.9.1",
-    "sqlite3": "^4.1.1",
+    "sqlite3": "^4.2.0",
     "squel": "^5.13.0",
     "tailwindcss": "^1.2.0-canary.5",
     "typescript": "^3.7.4",
