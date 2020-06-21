@@ -47,7 +47,7 @@
     "sqlite3": "^4.1.1",
     "squel": "^5.13.0",
     "tailwindcss": "^1.2.0-canary.5",
-    "typescript": "^3.7.4",
+    "typescript": "^3.9.5",
     "xstate": "^4.7.6"
   },
   "main": "public/electron.js",
