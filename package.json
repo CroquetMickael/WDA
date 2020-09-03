@@ -19,7 +19,7 @@
     "@testing-library/user-event": "^10.0.0",
     "@types/draft-js": "^0.10.38",
     "@types/draftjs-to-html": "^0.8.0",
-    "@types/jest": "^25.1.4",
+    "@types/jest": "^26.0.13",
     "@types/node": "^13.9.2",
     "@types/reach__router": "^1.2.6",
     "@types/react": "^16.9.17",
