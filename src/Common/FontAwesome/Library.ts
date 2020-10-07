@@ -1,5 +1,5 @@
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faHome, faPlus, faEye, faDesktop, faBars, faTimes, faWindowRestore, faWindowMinimize, faUserCog, faClipboardList, faArrowAltCircleDown, faTimesCircle, faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faPlus, faEye, faDesktop, faBars, faTimes, faWindowRestore, faWindowMinimize, faUserCog, faClipboardList, faArrowAltCircleDown, faTimesCircle, faCalendarAlt, faBold, faItalic, faCode, faUnderline, faList, faListUl, faListOl, faQuoteRight } from '@fortawesome/free-solid-svg-icons'
 
 const icons = [
     faBars,
@@ -15,7 +15,14 @@ const icons = [
     faTimes,
     faClipboardList,
     faArrowAltCircleDown,
-    faCalendarAlt
+    faCalendarAlt,
+    faBold,
+    faItalic,
+    faUnderline,
+    faCode,
+    faListUl,
+    faListOl,
+    faQuoteRight
 ]
 
 const loadFontAwesomeLibraries = () => {

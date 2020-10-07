@@ -7,9 +7,31 @@
 
 @import "tailwindcss/utilities";
 
-@import '../../node_modules/@fullcalendar/core/main.css';
-@import '../../node_modules/@fullcalendar/daygrid/main.css';
-@import '../../node_modules/@fullcalendar/timegrid/main.css';
+@import "../../node_modules/@fullcalendar/core/main.css";
+@import "../../node_modules/@fullcalendar/daygrid/main.css";
+@import "../../node_modules/@fullcalendar/timegrid/main.css";
+
+#article {
+  & blockquote {
+    @apply px-4 py-3 italic border-l-4 border-gray-400;
+  }
+  & h2 {
+    @apply text-3xl font-bold;
+  }
+  & h3 {
+    @apply text-2xl font-bold;
+  }
+  & p {
+    @apply py-2 text-xl text-justify;
+  }
+  & a {
+    @apply text-blue-500;
+  }
+  & img {
+    @apply block mx-auto text-center cursor-pointer;
+    width: 65%;
+  }
+}
 
 .demo-app {
   font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
