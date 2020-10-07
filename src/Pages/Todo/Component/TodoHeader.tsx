@@ -1,12 +1,12 @@
 import React from "react";
-import { InputComponent } from "../Input/InputComponent";
+import { InputComponent } from "../../../Components/Input/InputComponent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const TodoHeader = (props: any) => (
   <div className="flex">
-    <span className="justify-center content-center">
+    <span className="content-center justify-center">
       <FontAwesomeIcon
-        className="ml-2 mt-4 text-gray-300 hover:text-black cursor-pointer"
+        className="mt-4 ml-2 text-gray-300 cursor-pointer hover:text-black"
         icon="arrow-alt-circle-down"
         onClick={props.completedAllTodos}
       />

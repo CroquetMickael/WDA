@@ -12,4 +12,4 @@
 - [x] Add a TODO list inside the application (Use JSON and not SQLITE for the data)
 - [ ] Add black & white theme
 - [ ] Change todo by a calendar + add a notification system
-- [ ] Add I18n to permit multiple langage :)
+- [X] Add I18n to permit multiple langage :)

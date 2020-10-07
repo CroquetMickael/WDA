@@ -5,6 +5,7 @@ import {
   SidebarContext,
   SidebarContextInterface
 } from "../../Context/SidebarContext/SidebarContext";
+import { useTranslation } from "react-i18next";
 
 export interface SidebarLink {
   href: string;
@@ -19,12 +20,12 @@ interface SidebarContainerProps {
 
 const SidebarContainer = (props: SidebarContainerProps) => {
   const sidebarValues: SidebarContextInterface = useContext(SidebarContext);
-
+  const { t } = useTranslation();
   const links: SidebarLink[] = [
     {
       href: "/home",
       icon: "home",
-      libelle: "Home"
+      libelle: t('Home')
     },
     {
       href: "/newContent",

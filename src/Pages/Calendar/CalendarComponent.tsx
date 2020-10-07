@@ -25,7 +25,7 @@ interface CalendarProps {
 const CalendarComponent = (props: CalendarProps) => (
     <Layout marginTop={false} overflow={true}>
         <div className='flex bg-white'>
-            <div className="flex z-20 py-4 px-4">
+            <div className="z-20 flex px-4 py-4">
                 <FullCalendar
                     defaultView="dayGridMonth"
                     header={{
@@ -68,8 +68,7 @@ const CalendarComponent = (props: CalendarProps) => (
                     />
                 </div>
                 <button
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-semibold 
-                  py-2 px-4 rounded inline-flex justify-center items-center mt-4"
+                    className="inline-flex items-center justify-center px-4 py-2 mt-4 font-semibold text-white bg-blue-500 rounded hover:bg-blue-700"
                     onClick={props.addEvent}
                 >
                     Add an event

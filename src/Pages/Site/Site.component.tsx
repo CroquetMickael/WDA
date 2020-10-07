@@ -1,19 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Layout } from "../../Components/Layout/Layout";
-interface BlogConnectProps {
-  url: string;
-}
-const SiteComponent = (props: BlogConnectProps) => (
-  <>
+import { SiteService } from "./Site.service";
+
+const SiteContainer = () => {
+  const [url, setUrl] = useState<string>("");
+  const IframeElement = document.getElementById("Iframe")?.innerHTML;
+
+  console.log(IframeElement);
+
+  useEffect(() => {
+    SiteService(setUrl);
+  }, []);
+
+  return (
     <Layout>
       <iframe
         id="Iframe"
         title="Inline Frame Example"
         className="w-full h-full"
-        src={props.url}
+        src={url}
       />
     </Layout>
-  </>
-);
+  );
+};
 
-export { SiteComponent };
+export { SiteContainer };

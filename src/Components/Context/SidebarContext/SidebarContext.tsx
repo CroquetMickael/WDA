@@ -14,11 +14,7 @@ const SidebarProvider = (props: SidebarProps) => {
     const [open, setOpen] = useState(true);
 
     const toggleOpen = () => {
-      if (open) {
-        setOpen(false);
-      } else {
-        setOpen(true);
-      }
+      setOpen(!open);
     };
 
   return (

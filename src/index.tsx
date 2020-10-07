@@ -4,8 +4,8 @@ import "./styles/styles.css";
 import App from "./Apps/App";
 import * as serviceWorker from "./serviceWorker";
 import { initDatabase } from "./Database/InitDb/initDatabase";
-import { jsonData } from "./Pages/Todo/TodoService"
-
+import { jsonData } from "./Pages/Todo/TodoService";
+import "./Common/Translation/I18n";
 initDatabase();
 jsonData();
 

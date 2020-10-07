@@ -15,14 +15,17 @@ const Sidebar = (props: SidebarProps) => (
       props.open ? "w-1/3 lg:w-1/6" : "w-16"
     } ${props.modalOpen ? "z-0" : "z-20"}`}
   >
-    <div className="p-4 font-bold cursor-pointer text-center" onClick={props.toggleOpen}>
+    <div
+      className="p-4 font-bold text-center cursor-pointer"
+      onClick={props.toggleOpen}
+    >
       <FontAwesomeIcon icon="bars" />
     </div>
-    <ul className="list-reset flex-1">
+    <ul className="flex-1 list-reset">
       {props.links.map((link, index: number) => (
         <li key={index}>
           <Match path={link.href}>
-            {match => (
+            {(match) => (
               <Link
                 className={`block no-underline p-4 text-grey-darker font-bold 
               border-r-4 hover:border-blue-400 ${
@@ -41,7 +44,7 @@ const Sidebar = (props: SidebarProps) => (
       ))}
     </ul>
     <footer
-      className="w-full block border-t border-grey p-4 cursor-pointer"
+      className="block w-full p-4 border-t cursor-pointer border-grey"
       onClick={props.toggleModal}
     >
       <FontAwesomeIcon className="mx-1" icon="user-cog" />{" "}

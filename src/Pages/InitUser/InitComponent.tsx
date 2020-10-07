@@ -12,14 +12,14 @@ interface InitProps
   }> {}
 
 const InitComponent = (props: InitProps) => (
-  <div className="bg-grey h-screen w-screen">
-    <div className="flex flex-col items-center flex-1 h-full justify-center px-4 sm:px-0">
-      <div className="flex rounded-lg shadow-lg w-full bg-white sm:w-3/4 sm:mx-0 LoginMaxHeight">
-        <div className="flex flex-col w-full md:w-1/2 p-4">
-          <div className="flex flex-col flex-1 justify-center mb-8">
-            <h1 className="text-4xl text-center font-thin">Welcome !</h1>
+  <div className="w-screen h-screen bg-grey">
+    <div className="flex flex-col items-center justify-center flex-1 h-full px-4 sm:px-0">
+      <div className="flex w-full bg-white rounded-lg shadow-lg sm:w-3/4 sm:mx-0 LoginMaxHeight">
+        <div className="flex flex-col w-full p-4 md:w-1/2">
+          <div className="flex flex-col justify-center flex-1 mb-8">
+            <h1 className="text-4xl font-thin text-center">Welcome !</h1>
             <div className="w-full mt-4">
-              <div className="form-horizontal w-3/4 mx-auto">
+              <div className="w-3/4 mx-auto form-horizontal">
                 <div className="flex flex-col mt-4">
                   <InputComponent
                     type="text"
@@ -47,8 +47,7 @@ const InitComponent = (props: InitProps) => (
                 <div className="flex flex-col mt-8">
                   <button
                     type="submit"
-                    className="bg-blue-500 hover:bg-blue-700 text-white 
-                    text-sm font-semibold py-2 px-4 rounded"
+                    className="px-4 py-2 text-sm font-semibold text-white bg-blue-500 rounded hover:bg-blue-700"
                     onClick={props.init}
                   >
                     Sign In
@@ -58,9 +57,9 @@ const InitComponent = (props: InitProps) => (
             </div>
           </div>
         </div>
-        <div className="hidden md:block md:w-1/2 rounded-r-lg loginBackground">
+        <div className="hidden rounded-r-lg md:block md:w-1/2 loginBackground">
           <svg
-            className="inset-y-0 h-full fill-current text-white w-32 -ml-16"
+            className="inset-y-0 w-32 h-full -ml-16 text-white fill-current"
             preserveAspectRatio="none"
             viewBox="0 0 100 100"
           >
