@@ -4,7 +4,8 @@
 - [ ] **In view page create a button that permit to copy Markdown/HTML** (See HTML5)
 - [ ] **In view page create a button that permit to modify the content**
 - [ ] **In view page create a button that permit to delete the content** (Add modal)
-- [ ] **Using slateJS for the wisywyg** (https://docs.slatejs.org)
+- [x] **Using slateJS for the wisywyg** (https://docs.slatejs.org)
+- [] **Check how to convert slateJS element to Markdown/HTML**
 - [x] Show categories under content card
 - [x] Filter with categories (Animation is a +)
 - [x] Show all content in Home page
@@ -13,3 +14,5 @@
 - [ ] Add black & white theme
 - [ ] Change todo by a calendar + add a notification system
 - [X] Add I18n to permit multiple langage :)
+- [] Make translation for french & English side
+- [] Fixing layout that make non sense with titlebar
