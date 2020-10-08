@@ -6,6 +6,7 @@
 - [ ] **In view page create a button that permit to delete the content** (Add modal)
 - [x] **Using slateJS for the wisywyg** (https://docs.slatejs.org)
 - [] **Check how to convert slateJS element to Markdown/HTML**
+- [X] **Add undo/next button/command + img/video button to editor (Check most used wisiwyg)**
 - [x] Show categories under content card
 - [x] Filter with categories (Animation is a +)
 - [x] Show all content in Home page

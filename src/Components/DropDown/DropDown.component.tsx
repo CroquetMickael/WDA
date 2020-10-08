@@ -1,12 +1,16 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 
-const DropDownComponent = (props: any) => (
+interface DropDownProps {
+  openDropDown: boolean;
+  className?: string;
+}
+const DropDownComponent: FunctionComponent<DropDownProps> = (props) => (
   <div
-    className={`w-full max-w-xs overflow-auto transition-all transform  ease-out duration-100 origin-top-right ${
-      props.openDropDown ? "opacity-1 scale-y-1" : "opacity-0 scale-y-75"
+    className={`w-screen max-w-xs overflow-auto transition-all transform  ease-out duration-100 origin-top-right ${
+      props.openDropDown ? "scale-y-1" : "hidden scale-y-75"
     } ${props.className}`}
   >
-    <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 z-40">
+    <div className="z-40 px-8 pt-6 pb-8 mb-4 bg-white rounded shadow-md">
       {props.children}
     </div>
   </div>
