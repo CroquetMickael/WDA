@@ -59,7 +59,7 @@ const insertImage = (editor, url, setOpenDropDown?) => {
 
 interface LinkButtonProps {
   openDropDown: { image: boolean; url: boolean };
-  setOpenDropDown: ({}: { image: boolean; url: boolean }) => void;
+  setOpenDropDown: ({}: { image: boolean; url: boolean, save:boolean }) => void;
   setImage: (e: any) => void;
   image: string;
   editor: Editor;
@@ -69,7 +69,7 @@ const ImageButton = (props: LinkButtonProps) => (
     <button
       className="p-1 mb-1 mr-1 text-gray-400 hover:text-black"
       onClick={() =>
-        props.setOpenDropDown({ image: !props.openDropDown.image, url: false })
+        props.setOpenDropDown({ image: !props.openDropDown.image, url: false,save: false })
       }
     >
       <FontAwesomeIcon icon="image" />

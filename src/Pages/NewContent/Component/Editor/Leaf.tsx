@@ -3,30 +3,30 @@ import React from "react";
 const Leaf = ({ attributes, children, leaf }) => {
   if (leaf.textLeft) {
     children = (
-      <div {...attributes} className="text-left">
+      <span {...attributes} className="block text-left">
         {children}
-      </div>
+      </span>
     );
   }
   if (leaf.textCenter) {
     children = (
-      <div {...attributes} className="text-center">
+      <span {...attributes} className="block text-center">
         {children}
-      </div>
+      </span>
     );
   }
   if (leaf.textRight) {
     children = (
-      <div {...attributes} className="text-right">
+      <span {...attributes} className="block text-right">
         {children}
-      </div>
+      </span>
     );
   }
   if (leaf.textJustify) {
     children = (
-      <div {...attributes} className="text-justify">
+      <span {...attributes} className="block text-justify">
         {children}
-      </div>
+      </span>
     );
   }
   if (leaf.bold) {

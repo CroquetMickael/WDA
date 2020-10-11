@@ -1,5 +1,5 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
-import { createEditor, Transforms } from "slate";
+import React, { useCallback, useMemo, useState } from "react";
+import { createEditor } from "slate";
 import { Slate, Editable, withReact } from "slate-react";
 import { BlockButton, toggleBlock } from "./Button/BlockButton";
 import { MarkButton, toggleMark } from "./Button/MarkButton";
@@ -10,14 +10,19 @@ import isHotkey from "is-hotkey";
 import { Separator } from "./Separator";
 import { LinkButton, withLinks } from "./Button/LinkButton";
 import { ImageButton, withImages } from "./Button/ImageButton";
+import { SaveButton } from "./Button/SaveButton";
+import { withHistory } from "slate-history";
 
 const Editor = () => {
-  const editor = withImages(withLinks(useMemo(() => withReact(createEditor()), [])));
+  const editor = withImages(
+    withLinks(useMemo(() => withHistory(withReact(createEditor())), []))
+  );
   const renderLeaf = useCallback((props) => <Leaf {...props} />, []);
   const renderElement = useCallback((props) => <Element {...props} />, []);
   const [openDropDown, setOpenDropDown] = useState({
     image: false,
     url: false,
+    save: false,
   });
   const [url, setUrl] = useState("");
   const [image, setImage] = useState("");
@@ -27,19 +32,24 @@ const Editor = () => {
       children: [{ text: "A line of text in a paragraph." }],
     },
   ]);
+  const [title, setTitle] = useState("");
 
   const HOTKEYS: any = {
     "mod+b": "bold",
     "mod+i": "italic",
     "mod+u": "underline",
     "mod+`": "code",
+    "mod+z": "undo",
+    "mod+y": "redo",
   };
 
   return (
     <Slate
       editor={editor}
       value={value}
-      onChange={(newValue) => setValue(newValue)}
+      onChange={(newValue) => {
+        setValue(newValue);
+      }}
     >
       <Toolbar>
         <select onChange={(e) => toggleBlock(editor, e.target.value)}>
@@ -87,8 +97,17 @@ const Editor = () => {
           setOpenDropDown={setOpenDropDown}
           setImage={setImage}
         />
+        <Separator />
+        <SaveButton
+          editorValue={value}
+          setOpenDropDown={setOpenDropDown}
+          openDropDown={openDropDown}
+          setTitle={setTitle}
+          title={title}
+        />
       </Toolbar>
       <hr />
+      <h1 className="pl-2 text-3xl font-bold bg-white">{title}</h1>
       <Editable
         id="article"
         renderLeaf={renderLeaf}
@@ -99,6 +118,11 @@ const Editor = () => {
             if (isHotkey(hotkey, event as any)) {
               event.preventDefault();
               const mark = HOTKEYS[hotkey];
+              if (mark === "undo") {
+                return editor.undo();
+              } else if (mark === "redo") {
+                return editor.redo();
+              }
               toggleMark(editor, mark);
             }
           }

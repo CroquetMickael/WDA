@@ -1,12 +1,13 @@
-- [ ] **Add option to Editor for the title, type and categories make a dropdown or whatever** (Type / Title done)
+- [ ] **Add option to Editor for the title, type and categories make a dropdown or whatever** (Title done)
 - [ ] **Finish Account Settings Modal, refactor the V1 made**
 - [ ] **Create a view page**
 - [ ] **In view page create a button that permit to copy Markdown/HTML** (See HTML5)
 - [ ] **In view page create a button that permit to modify the content**
 - [ ] **In view page create a button that permit to delete the content** (Add modal)
 - [x] **Using slateJS for the wisywyg** (https://docs.slatejs.org)
-- [] **Check how to convert slateJS element to Markdown/HTML**
+- [htmldone/] **Check how to convert slateJS element to Markdown/HTML**
 - [X] **Add undo/next button/command + img/video button to editor (Check most used wisiwyg)**
+- [] **Handle categories in text editor**
 - [x] Show categories under content card
 - [x] Filter with categories (Animation is a +)
 - [x] Show all content in Home page
@@ -16,4 +17,4 @@
 - [ ] Change todo by a calendar + add a notification system
 - [X] Add I18n to permit multiple langage :)
 - [] Make translation for french & English side
-- [] Fixing layout that make non sense with titlebar
+- [] Fixing layout that make non sense with titlebar (Go for it now)

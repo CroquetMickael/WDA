@@ -41,7 +41,7 @@ const WPRouter = () => (
     <SidebarProvider>
       <AuthProvider>
         <Router className="w-full h-full">
-          <PublicRoute component={LoginContainer} path="/" />
+          <PublicRoute component={NewContentComponent} path="/" />
           <PublicRoute component={InitContainer} path="/initUser" />
           <ProtectedRoute component={Home} path="/home" />
           <PublicRoute component={TodoContainer} path="/todo" />

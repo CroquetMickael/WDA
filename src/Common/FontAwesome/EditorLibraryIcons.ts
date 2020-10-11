@@ -1,4 +1,4 @@
-import { faAlignCenter, faAlignJustify, faAlignLeft, faAlignRight, faBold, faCode, faImage, faItalic, faLink, faListOl, faListUl, faQuoteRight, faStrikethrough, faUnderline } from '@fortawesome/free-solid-svg-icons'
+import { faAlignCenter, faAlignJustify, faAlignLeft, faAlignRight, faBold, faCode, faImage, faItalic, faLink, faListOl, faListUl, faQuoteRight, faSave, faStrikethrough, faUnderline } from '@fortawesome/free-solid-svg-icons'
 
 const editorIcons = [
     faBold,
@@ -14,7 +14,8 @@ const editorIcons = [
     faAlignRight,
     faAlignCenter,
     faImage,
-    faLink
+    faLink,
+    faSave
 ]
 
 export { editorIcons }
