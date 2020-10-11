@@ -33,7 +33,7 @@
     "slate": "^0.59.0",
     "slate-history": "^0.59.0",
     "slate-react": "^0.59.0",
-    "sqlite3": "^4.2.0",
+    "sqlite3": "^5.0.0",
     "squel": "^5.13.0",
     "tailwindcss": "^1.8.11",
     "typescript": "^3.9.7",
